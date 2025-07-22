@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Affiliate Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        .counter {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Affiliate Site</h1>
+        <p>This website is an Amazon Affiliate site. We may earn commissions on qualifying purchases made through our links.</p>
+        <p>Thank you for visiting!</p>
+
+        <div class="counter">
+            Visitor Count: <span id="visitor-count">0</span>
+        </div>
+    </div>
+
+    <script>
+        // Use localStorage to simulate a visitor counter (works per browser)
+        let count = localStorage.getItem('visitCount') || 0;
+        count++;
+        localStorage.setItem('visitCount', count);
+        document.getElementById('visitor-count').innerText = count;
+    </script>
+</body>
+</html>
+
